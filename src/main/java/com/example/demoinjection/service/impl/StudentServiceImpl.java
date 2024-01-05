@@ -16,11 +16,11 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public StudentDTO createStudent(StudentDTO studentDTO){
-//        Student student = new Student();
-//        student.setName(studentDTO.getName());
-//        student.setExp(studentDTO.getExp());
-//        studentRepository.save(student);
-        studentRepository.save(new Student(studentDTO.getName(),studentDTO.getExp()));
+        Student student = new Student();
+        student.setName(studentDTO.getName());
+        student.setExp(studentDTO.getExp());
+        studentRepository.save(student);
+
         return studentDTO;
     }
 }
